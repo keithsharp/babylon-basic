@@ -1,13 +1,13 @@
 const path = require("path");
 const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const appDirectory = fs.realpathSync(process.cwd());
 
 module.exports = {
     entry: path.resolve(appDirectory, "src/app.ts"), //path to the main .ts file
     output: {
         filename: "js/basic-babylon.js", //name for the javascript file that is created/compiled in memory
+        clean: true,
     },
     devServer: {
         host: "0.0.0.0",
@@ -34,7 +34,6 @@ module.exports = {
             inject: true,
             template: path.resolve(appDirectory, "public/index.html"),
         }),
-        new CleanWebpackPlugin(),
     ],
     mode: "development",
 };
