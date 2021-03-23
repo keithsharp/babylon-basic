@@ -1,0 +1,11 @@
+{
+  "name": "basic-bablyon",
+  "version": "1.0.0",
+  "description": "A basic Bablyon JS example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Keith Sharp",
+  "license": "AGPL"
+}
