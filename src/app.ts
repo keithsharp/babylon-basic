@@ -3,8 +3,11 @@ import { Engine, Scene, FreeCamera, Vector3, Mesh, Curve3, Color3, Color4 } from
 class App {
     constructor() {
         const canvas = document.getElementById("renderCanvas") as HTMLCanvasElement;
+        const divFps = document.getElementById("fps");
         
         const engine = new Engine(canvas, true);
+        divFps.innerHTML = engine.getFps().toFixed() + " fps";
+
         const scene = new Scene(engine);
         scene.clearColor = new Color4(0, 0, 0, 1);
         
